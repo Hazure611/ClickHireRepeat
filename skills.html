@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skills | Sheila Marie De Guzman</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .wiggle {
+      transition: transform 0.2s ease-in-out;
+    }
+    .wiggle:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+    .fadein {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -27,23 +42,29 @@
   <section class="py-20 px-6 max-w-5xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-12">🧠💻 Skills I Bring to the Table</h2>
 
-    <!-- Tech + Tools -->
+    <!-- Gacha Button -->
+    <div class="text-center mb-10">
+      <button onclick="rollSkill()" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full shadow-md transition duration-200">🎰 Roll a Random Skill Combo</button>
+      <div id="skillResult" class="mt-6 text-lg italic text-gray-300 fadein"></div>
+    </div>
+
+    <!-- Tech & Tools -->
     <div class="mb-12">
       <h3 class="text-2xl font-semibold mb-4">🛠️ Tech & Tools</h3>
       <div class="flex flex-wrap gap-3 text-sm">
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🧮 Excel</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">📊 Google Sheets</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">📈 Tableau</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🛒 Shopify</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🔌 BigCommerce</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">📦 Magento</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🌐 WordPress</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🎯 Jira</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🛎️ Front</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">💌 HubSpot</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">📁 Salesforce</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🎫 Zendesk</span>
-        <span class="bg-indigo-600 px-3 py-1 rounded-full">🎨 Canva</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🧮 Excel</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">📊 Google Sheets</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">📈 Tableau</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🛒 Shopify</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🔌 BigCommerce</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">📦 Magento</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🌐 WordPress</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🎯 Jira</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🛎️ Front</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">💌 HubSpot</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">📁 Salesforce</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🎫 Zendesk</span>
+        <span class="bg-indigo-600 px-3 py-1 rounded-full wiggle">🎨 Canva</span>
       </div>
     </div>
 
@@ -51,13 +72,13 @@
     <div class="mb-12">
       <h3 class="text-2xl font-semibold mb-4">🗣️ Communication & Support</h3>
       <div class="flex flex-wrap gap-3 text-sm">
-        <span class="bg-pink-600 px-3 py-1 rounded-full">🗣️💻 Chat Support</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">📞 Phone Support</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">📬 Email Support</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">🌍 ESL Instruction</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">📚 Training Support</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">💡 Technical Troubleshooting</span>
-        <span class="bg-pink-600 px-3 py-1 rounded-full">📢 Cross-functional Communication</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">🗣️💻 Chat Support</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">📞 Phone Support</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">📬 Email Support</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">🌍 ESL Instruction</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">📚 Training Support</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">💡 Technical Troubleshooting</span>
+        <span class="bg-pink-600 px-3 py-1 rounded-full wiggle">📢 Cross-functional Communication</span>
       </div>
     </div>
 
@@ -65,25 +86,50 @@
     <div class="mb-12">
       <h3 class="text-2xl font-semibold mb-4">🌸 Soft Skills (a.k.a. My Sparkly Superpowers)</h3>
       <div class="flex flex-wrap gap-3 text-sm">
-        <span class="bg-green-600 px-3 py-1 rounded-full">🧠 Problem Solving</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">⚡ Quick Learner</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">🧃 Adaptable AF</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">🤹 Multitasking</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">🎯 Detail-Oriented</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">💬 Empathetic Listener</span>
-        <span class="bg-green-600 px-3 py-1 rounded-full">🕵️ Curious & Resourceful</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">🧠 Problem Solving</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">⚡ Quick Learner</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">🧃 Adaptable AF</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">🤹 Multitasking</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">🎯 Detail-Oriented</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">💬 Empathetic Listener</span>
+        <span class="bg-green-600 px-3 py-1 rounded-full wiggle">🕵️ Curious & Resourceful</span>
       </div>
     </div>
 
-    <!-- Bonus Quirk -->
+    <!-- Bonus -->
     <div class="mt-10 text-center text-gray-400 italic">
-      "Not to brag, but my Google Sheet formulas once made someone say 'whoa.'"
+      “Not to brag, but my Google Sheet formulas once made someone say ‘whoa.’”
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-center py-6 mt-10 text-sm text-gray-400">
-    <p>© 2025 Sheila Marie De Guzman / Hazure Vale | These skills come with caffeine.</p>
+    <p>© 2025 Sheila Marie De Guzman / Hazure Vale | Skills powered by sarcasm and snacks.</p>
   </footer>
+
+  <!-- Gacha Script -->
+  <script>
+    const combos = [
+      "🧮 Excel master by day, Canva warrior by night.",
+      "📬 Email support + 📊 Google Sheets = admin baddie energy.",
+      "🎨 Canva skills sharper than your boss's tie.",
+      "🧠 Solved bugs in Shopify while making iced coffee. Iconic.",
+      "🛎️ Front support + 🗣️ Chat = chaos handled gracefully.",
+      "💌 HubSpot magician with a touch of ✨Google Sheets glam✨.",
+      "⚡ Fast learner who actually reads the error messages.",
+      "📞 Phone Support Pro with the emotional range of a therapist.",
+      "🌍 ESL instructor turned CRM ninja — yes, I contain multitudes.",
+      "📦 Magento wrangler. Yes, it’s as wild as it sounds."
+    ];
+
+    function rollSkill() {
+      const result = combos[Math.floor(Math.random() * combos.length)];
+      const display = document.getElementById("skillResult");
+      display.classList.remove("fadein");
+      void display.offsetWidth; // reflow trick to restart animation
+      display.textContent = result;
+      display.classList.add("fadein");
+    }
+  </script>
 </body>
 </html>
