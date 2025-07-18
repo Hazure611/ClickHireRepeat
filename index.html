@@ -3,45 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hazure Vale • Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Your CSS -->
+  <title>Welcome | Hazure Vale</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #f8f8f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #1f1f2e;
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px #6b21a8aa;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #c084fc;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #8b5cf6;
+      color: #f8f8f2;
+    }
+    nav a.underline,
+    nav a.font-semibold {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ec4899;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p.tagline {
+      font-size: 1.25rem;
+      color: #d8bfd8;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: #1c1c1c;
+      border: 1px solid #3b0764;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(192, 132, 252, 0.2);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      color: #c084fc;
+      margin-bottom: 1rem;
+    }
+    .card p {
+      color: #e0d4f7;
+      margin-bottom: 1.5rem;
+    }
+    .card a {
+      display: inline-block;
+      background-color: #c084fc;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .card a:hover {
+      background-color: #ec4899;
+      color: #fff;
+    }
+    footer {
+      background-color: #1f1f2e;
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #7c3aedaa;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html" class="underline font-semibold">Home</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="work.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="contact.html">Hire Me</a>
+      <a href="personal-journey.html">Journey</a>
     </nav>
   </header>
 
   <main>
-    <section class="card" style="text-align: center; padding: 4rem 2rem;">
-      <h1 class="glow-text">Hi! I'm Hazure Vale ✨</h1>
-      <p>Support sorceress by day, spicy fiction writer by night. Based in PH. Here to make tech & stories sparkle.</p>
-      <a href="projects.html" class="btn">See My Work</a>
-    </section>
+    <h1>Sheila Marie vs. Hazure Vale</h1>
+    <p class="tagline">A tale of one woman, two energies — both dramatic AF.</p>
 
-    <section class="card" style="text-align: center; padding: 2rem;">
-      <h2>Resume</h2>
-      <a href="https://www.canva.com/design/DAGtJsFB26w/QOhF_CYMdf-NVZOJTW6hHA/view?utm_content=DAGtJsFB26w&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton" target="_blank" class="btn">View Resume</a>
-      <a href="resume.pdf" download class="btn">Download (PDF)</a>
-    </section>
-
-    <section class="card" style="text-align: center; padding: 2rem;">
-      <h2>Visual Portfolio</h2>
-      <a href="https://www.canva.com/design/DAGtKFs_Y10/iVhB07XtacawVk9WY2MTAg/view?embed" target="_blank" class="btn">View Deck</a>
+    <section class="identity-grid">
+      <div class="card">
+        <h2>Sheila Marie De Guzman</h2>
+        <p>The grounded, capable queen. Brains, heart, and tech support skills sharper than your ex’s excuses.</p>
+        <a href="personal-journey.html">Read Her Story</a>
+      </div>
+      <div class="card">
+        <h2>Hazure Vale</h2>
+        <p>The unhinged chaos bard. Writer of spicy tales, peddler of pixels, and destroyer of boring portfolios.</p>
+        <a href="hazure.html">Meet the Madness</a>
+      </div>
     </section>
   </main>
 
-  <footer style="text-align: center; padding: 1rem 0;">
-    © 2025 Hazure Vale — built with sass & caffeine.
+  <footer>
+    <p>© 2025 Sheila Marie De Guzman aka Hazure Vale | Bold. Bruised. Beautifully Unbothered.</p>
   </footer>
 </body>
 </html>
