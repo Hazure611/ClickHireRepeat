@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Easter Eggs | Secrets & Shenanigans</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f8f8f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      color: #c084fc;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    .quote {
+      background: #1a1a2e;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-style: italic;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px #6b21a8aa;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+      max-width: 600px;
+      text-align: center;
+    }
+    .quote:hover {
+      background-color: #3b3b66;
+      color: #ec4899;
+      box-shadow: 0 0 25px #ec4899aa;
+    }
+    .mini-resume {
+      background: #1a1a2e;
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 3rem auto 1rem auto;
+      text-align: center;
+      box-shadow: 0 0 15px #6b21a8aa;
+    }
+    button {
+      background-color: #c084fc;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      color: #121212;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #ec4899;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      margin-top: auto;
+      color: #7c3aedaa;
+      font-style: italic;
+      font-size: 0.875rem;
+      padding: 1rem 0 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Secret Sauce & Easter Eggs</h1>
+
+  <div class="quote" title="Click for more sass">
+    "This resume has 100% more personality than Chad’s."
+  </div>
+
+  <div class="quote" title="Hover for a giggle">
+    "I can fix your tech issues faster than you can say 'Did you try turning it off and on again?'"
+  </div>
+
+  <div class="quote" title="Hover over me">
+    "Will work for snacks. And by snacks, I mean coffee. Lots of coffee."
+  </div>
+
+  <div class="mini-resume" id="miniResume">
+    <p><strong>Mini Resume Generator</strong></p>
+    <p id="resumeText">Click the button for an unhinged summary!</p>
+    <button onclick="generateResume()">Generate</button>
+  </div>
+
+  <footer>© 2025 Sheila Marie De Guzman | Powered by sass & caffeine.</footer>
+
+  <script>
+    const resumes = [
+      "A wizard of support and sass, solving problems with style and a side of snark.",
+      "Part-time chaos agent, full-time queen of multitasking and mayhem.",
+      "Master of turning 'uh-oh' into 'heck yeah!' with a smile and a keyboard.",
+      "Customer support ninja with a black belt in patience and emojis.",
+      "Technical troubleshooter who speaks fluent sarcasm and empathy.",
+      "The human version of Ctrl+Z for your worst workdays."
+    ];
+
+    function generateResume() {
+      const random = resumes[Math.floor(Math.random() * resumes.length)];
+      document.getElementById('resumeText').textContent = random;
+    }
+  </script>
+
+</body>
+</html>
