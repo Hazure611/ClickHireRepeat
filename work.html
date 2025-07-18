@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work Experience | Sheila Marie De Guzman</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    // JS for expanding cards
+    function toggleDetails(id) {
+      const elem = document.getElementById(id);
+      elem.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Sheila Marie De Guzman</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="work.html" class="underline font-semibold">Experience</a>
+        <a href="skills.html" class="hover:underline">Skills</a>
+        <a href="projects.html" class="hover:underline">Portfolio</a>
+        <a href="contact.html" class="hover:underline">Hire Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Work Experience -->
+  <section class="py-20 px-6 max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">💼 Work Experience</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Just Press One -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all cursor-pointer" onclick="toggleDetails('jpo')">
+        <h3 class="text-xl font-semibold mb-2">Customer Support</h3>
+        <p class="text-sm text-gray-400 mb-1">Just Press One | 2022</p>
+        <div class="flex flex-wrap gap-2 text-xs text-gray-300 mb-3">
+          <span class="bg-gray-700 px-2 py-1 rounded-full">📞 Phone Support</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Zendesk</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">CRM</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Multitasking</span>
+        </div>
+        <div id="jpo" class="hidden text-sm">
+          Took customer service to the next level through clear communication, patience, and next-level troubleshooting. Dealt with heated calls without losing cool or coffee.
+        </div>
+      </div>
+
+      <!-- Convert Digital -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all cursor-pointer" onclick="toggleDetails('convert')">
+        <h3 class="text-xl font-semibold mb-2">Account Coordinator</h3>
+        <p class="text-sm text-gray-400 mb-1">Convert Digital | 2023</p>
+        <div class="flex flex-wrap gap-2 text-xs text-gray-300 mb-3">
+          <span class="bg-gray-700 px-2 py-1 rounded-full">🛒 Shopify</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Jira</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Client Comms</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Task Management</span>
+        </div>
+        <div id="convert" class="hidden text-sm">
+          Synced with devs and creatives to get sh*t DONE. Kept eCommerce launches on track, clients happy, and chaos minimal (unless it was Friday — then we vibed).
+        </div>
+      </div>
+
+      <!-- Shop Solar Kits -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition-all cursor-pointer" onclick="toggleDetails('solar')">
+        <h3 class="text-xl font-semibold mb-2">Customer Service Representative</h3>
+        <p class="text-sm text-gray-400 mb-1">Shop Solar Kits | 2021–2022</p>
+        <div class="flex flex-wrap gap-2 text-xs text-gray-300 mb-3">
+          <span class="bg-gray-700 px-2 py-1 rounded-full">💬 Chat Support</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Email Support</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">Technical Troubleshooting</span>
+          <span class="bg-gray-700 px-2 py-1 rounded-full">WordPress</span>
+        </div>
+        <div id="solar" class="hidden text-sm">
+          Supported users in solar purchases and troubleshooting, managed tickets across platforms, and stayed loyal to the job even during loss. Grit and glow, always.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center py-6 mt-10 text-sm text-gray-400">
+    <p>© 2025 Sheila Marie De Guzman / Hazure Vale | Click, expand, repeat.</p>
+  </footer>
+</body>
+</html>
