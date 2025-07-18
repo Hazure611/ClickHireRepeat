@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | Sheila Marie De Guzman</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Buttons inline, spaced */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    /* Card style tweak */
+    .card {
+      max-width: 600px;
+      margin: 1rem auto;
+      background-color: #1f2937;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #374151;
+    }
+    .book-link {
+      color: #8b5cf6;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .book-link:hover {
+      color: #ec4899;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <header class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Sheila Marie De Guzman</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="work.html" class="hover:underline">Experience</a>
+        <a href="skills.html" class="hover:underline">Skills</a>
+        <a href="projects.html" class="underline font-semibold">Portfolio</a>
+        <a href="contact.html" class="hover:underline">Hire Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-20 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-12">📚 Projects & Portfolio</h2>
+
+    <div id="project-container" class="card">
+
+      <!-- Project info will appear here -->
+
+    </div>
+
+    <div class="btn-group">
+      <button onclick="prevProject()" class="btn">⬅️ Previous</button>
+      <button onclick="nextProject()" class="btn">Next ➡️</button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-center py-6 mt-10 text-sm text-gray-400">
+    <p>© 2025 Sheila Marie De Guzman / Hazure Vale | Stories, sass, and some sweet chaos.</p>
+  </footer>
+
+  <script>
+    const projects = [
+      {
+        title: "Room Zer0",
+        description: "A genre-bending tale of rebellion, found family, and the chaos of control — crafted by Hazure Vale.",
+        linkText: "Explore the Room Zer0 Universe",
+        linkHref: "room-zero.html",
+      },
+      {
+        title: "Obsidian Code",
+        description: "Dark secrets unravel in this gripping novel — available on Amazon.",
+        linkText: "Order Obsidian Code on Amazon",
+        linkHref: "https://a.co/d/h8ZySnL",
+      },
+      {
+        title: "Crimson Confession",
+        description: "A tale of forbidden truths and passionate confessions — get your copy now!",
+        linkText: "Order Crimson Confession on Amazon",
+        linkHref: "https://a.co/d/fzzLVNu",
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function renderProject(index) {
+      const container = document.getElementById("project-container");
+      const project = projects[index];
+      container.innerHTML = `
+        <h3 class="text-3xl font-semibold mb-4">${project.title}</h3>
+        <p class="mb-4">${project.description}</p>
+        <a href="${project.linkHref}" class="book-link" target="_blank" rel="noopener noreferrer">${project.linkText}</a>
+      `;
+    }
+
+    function nextProject() {
+      currentIndex = (currentIndex + 1) % projects.length;
+      renderProject(currentIndex);
+    }
+
+    function prevProject() {
+      currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+      renderProject(currentIndex);
+    }
+
+    // Initial render
+    renderProject(currentIndex);
+  </script>
+</body>
+</html>
