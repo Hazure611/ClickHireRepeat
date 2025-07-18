@@ -6,18 +6,63 @@
   <title>Sheila’s Personal Journey | Sheila Marie De Guzman</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      background-color: #121212;
+      color: #f8f8f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #1f1f2e;
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px #6b21a8aa;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #c084fc;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #8b5cf6;
+      color: #f8f8f2;
+    }
+    nav a.underline,
+    nav a.font-semibold {
+      text-decoration: underline;
+      font-weight: 700;
+    }
     main {
       max-width: 700px;
       margin: 3rem auto;
       padding: 0 1rem;
-      line-height: 1.7;
+      flex-grow: 1;
     }
     h1, h2 {
       text-align: center;
+      margin: 0;
     }
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      color: #ec4899;
     }
     h2 {
       font-size: 1.8rem;
@@ -30,6 +75,7 @@
     p {
       margin-bottom: 1.25rem;
       font-size: 1.125rem;
+      color: #d8bfd8;
     }
     .highlight {
       color: #8b5cf6;
@@ -42,23 +88,29 @@
       color: #9ca3af;
       font-style: italic;
     }
+    footer {
+      background-color: #1f1f2e;
+      text-align: center;
+      padding: 1.5rem 0;
+      color: #7c3aedaa;
+      font-style: italic;
+      font-size: 0.9rem;
+      user-select: none;
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body>
 
-  <header class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Sheila Marie De Guzman</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="work.html" class="hover:underline">Experience</a>
-        <a href="skills.html" class="hover:underline">Skills</a>
-        <a href="projects.html" class="hover:underline">Portfolio</a>
-        <a href="contact.html" class="hover:underline">Hire Me</a>
-        <a href="personal-journey.html" class="underline font-semibold">Personal Journey</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="contact.html">Hire Me</a>
+      <a href="personal-journey.html" class="underline font-semibold" aria-current="page">Personal Journey</a>
+    </nav>
   </header>
 
   <main>
@@ -91,7 +143,7 @@
     <p class="footer-note">Thanks for reading. Now, let’s make some magic happen.</p>
   </main>
 
-  <footer class="bg-gray-900 text-center py-6 mt-10 text-sm text-gray-400">
+  <footer>
     <p>© 2025 Sheila Marie De Guzman / Hazure Vale | Stories, sass, and some sweet chaos.</p>
   </footer>
 
