@@ -12,6 +12,7 @@
       justify-content: center;
       gap: 1rem;
       margin-top: 1rem;
+      flex-wrap: wrap;
     }
     /* Card style tweak */
     .card {
@@ -21,7 +22,8 @@
       border-radius: 1rem;
       padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-align: center;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -32,6 +34,8 @@
       font-weight: 600;
       text-decoration: none;
       transition: color 0.3s ease;
+      display: inline-block;
+      margin: 0.5rem 1rem;
     }
     .book-link:hover {
       color: #ec4899;
@@ -55,13 +59,11 @@
     </div>
   </header>
 
-  <main class="py-20 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-12">📚 Projects & Portfolio</h2>
+  <main class="py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center">📚 Projects & Portfolio</h2>
 
     <div id="project-container" class="card">
-
       <!-- Project info will appear here -->
-
     </div>
 
     <div class="btn-group">
@@ -79,20 +81,24 @@
       {
         title: "Room Zer0",
         description: "A genre-bending tale of rebellion, found family, and the chaos of control — crafted by Hazure Vale.",
-        linkText: "Explore the Room Zer0 Universe",
-        linkHref: "room-zero.html",
+        links: [
+          { text: "Explore the Room Zer0 Universe", href: "room-zero.html" },
+          { text: "GitHub Repo", href: "https://github.com/Hazure611/RoomZer0" }
+        ]
       },
       {
         title: "Obsidian Code",
         description: "Dark secrets unravel in this gripping novel — available on Amazon.",
-        linkText: "Order Obsidian Code on Amazon",
-        linkHref: "https://a.co/d/h8ZySnL",
+        links: [
+          { text: "Order Obsidian Code on Amazon", href: "https://a.co/d/h8ZySnL" }
+        ]
       },
       {
         title: "Crimson Confession",
         description: "A tale of forbidden truths and passionate confessions — get your copy now!",
-        linkText: "Order Crimson Confession on Amazon",
-        linkHref: "https://a.co/d/fzzLVNu",
+        links: [
+          { text: "Order Crimson Confession on Amazon", href: "https://a.co/d/fzzLVNu" }
+        ]
       }
     ];
 
@@ -101,10 +107,15 @@
     function renderProject(index) {
       const container = document.getElementById("project-container");
       const project = projects[index];
+      const linksHTML = project.links.map(link => `
+        <a href="${link.href}" target="_blank" rel="noopener noreferrer" class="book-link">
+          ${link.text}
+        </a>
+      `).join('');
       container.innerHTML = `
         <h3 class="text-3xl font-semibold mb-4">${project.title}</h3>
-        <p class="mb-4">${project.description}</p>
-        <a href="${project.linkHref}" class="book-link" target="_blank" rel="noopener noreferrer">${project.linkText}</a>
+        <p class="mb-6">${project.description}</p>
+        <div>${linksHTML}</div>
       `;
     }
 
