@@ -3,51 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClickHireRepeat - Hazure Vale</title>
+  <title>Hazure Vale – Portfolio</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Inter&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- ====== Navbar ====== -->
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="mailto:hazurevale@gmail.com">Contact</a>
+    <nav style="padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <h1 class="glow-text">Hazure Vale</h1>
+      <div>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1 class="glow-text wiggle">Hazure Vale</h1>
-      <p>A little unhinged. A lot skilled. Welcome to my chaotic resume portal.</p>
-      <a href="HazureVale_Resume.pdf" class="btn" download>Download Resume</a>
-    </section>
+  <!-- ====== Hero Section ====== -->
+  <section style="text-align: center; padding: 4rem 2rem;">
+    <h2 class="glow-text">Hi, I'm Hazure! ✨</h2>
+    <p style="max-width: 600px; margin: 0 auto;">A spicy support sorceress, gacha luck goddess, and tech-savvy cutie based in the PH. I build cool stuff, solve messy problems, and occasionally sparkle ✨</p>
+  </section>
 
-    <section class="projects">
-      <h2>Featured Projects</h2>
-      <div class="card">
+  <!-- ====== Projects Section ====== -->
+  <section id="projects" style="padding: 2rem;">
+    <h2 style="text-align: center;">🌟 Projects</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; padding: 2rem 0;">
+      
+      <!-- Project Card 1 -->
+      <div class="card skill-gacha">
         <h3>RoomZer0</h3>
-        <p>Technical Support • Zendesk • Gorgias • Custom CRM • Shopify</p>
-        <a href="https://hazure611.github.io/RoomZer0/" target="_blank">View Project</a>
+        <p>A weird hotel but make it code. Coded lore, good UI, even weirder backend jokes.</p>
+        <a class="btn" href="RoomZer0/index.html" target="_blank">Enter RoomZer0</a>
+        <div style="margin-top: 1rem;">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">LoreCore</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Shop Solar Kits</h3>
-        <p>Tier 1 Tech Support • Salesforce • Solar hardware knowledge • Customer success</p>
-        <a href="https://hazure611.github.io/ShopSolarKits/" target="_blank">View Project</a>
-      </div>
-      <div class="card">
-        <h3>Convert Digital</h3>
-        <p>Account Coordination • Client Emails • Jira • Magento • Project Trafficking</p>
-        <a href="https://hazure611.github.io/ConvertDigital/" target="_blank">View Project</a>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>Made with coffee-fueled chaos by Hazure Vale ✨</p>
+      <!-- Project Card 2 -->
+      <div class="card skill-gacha">
+        <h3>Project Echo</h3>
+        <p>A portfolio site with drama, flair, and animated chaos. Like Echo herself.</p>
+        <a class="btn" href="#" target="_blank">View Project</a>
+        <div style="margin-top: 1rem;">
+          <span class="tag">React</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Extra™</span>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="card skill-gacha">
+        <h3>Kitty Hazami</h3>
+        <p>Her royal fluffiness deserved a site. So I made her one. Paws included.</p>
+        <a class="btn" href="#" target="_blank">Visit Kitty</a>
+        <div style="margin-top: 1rem;">
+          <span class="tag">Photoshop</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CatMom Dev</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== About Section ====== -->
+  <section id="about" style="text-align: center; padding: 3rem 2rem;">
+    <h2>🦋 About Me</h2>
+    <p style="max-width: 600px; margin: 0 auto;">
+      B.S. in Hotel & Restaurant Management, turned techy glitch witch. I do customer support, web things, data, and emotional damage (ask my ex). Based in the PH. Currently building cool stuff and loving my cats harder than my last situationship.
+    </p>
+  </section>
+
+  <!-- ====== Contact Section ====== -->
+  <section id="contact" style="text-align: center; padding: 3rem 2rem;">
+    <h2>📬 Let's Connect</h2>
+    <p>Wanna collab, hire me, or just say hi? Slide into my DMs—digitally of course.</p>
+    <a class="btn" href="mailto:hazure@example.com">Email Me</a>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer style="text-align: center; padding: 1.5rem;">
+    <p>© 2025 Hazure Vale. Made with ☕ and trauma.</p>
   </footer>
+
 </body>
 </html>
