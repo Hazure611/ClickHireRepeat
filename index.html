@@ -2,127 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sheila Marie De Guzman | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickHireRepeat - Hazure Vale</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    a {
-      text-decoration: none;
-      color: #a78bfa; /* lavender-ish */
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #f472b6; /* pink */
-    }
-    nav a {
-      margin-left: 1rem;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    .glow-text {
-      color: #c084fc;
-      text-shadow:
-        0 0 8px #c084fc,
-        0 0 20px #c084fc,
-        0 0 30px #c084fc;
-    }
-    .card {
-      background: #1e1e2f;
-      border-radius: 12px;
-      padding: 1.5rem 1rem;
-      color: #ddd;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 0 12px #7c3aed88;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      user-select: none;
-    }
-    .card:hover {
-      background: #3b3b66;
-      box-shadow: 0 0 25px #f472b6cc;
-      color: #f472b6;
-    }
-    .btn {
-      background-color: #c084fc;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      color: #121212;
-      display: inline-block;
-      margin-top: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #ec4899;
-      color: white;
-    }
-    main {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #7c3aedaa;
-      font-style: italic;
-    }
-    .explore-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-    .explore-container a {
-      flex: 1 1 200px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;">
-      <h1 class="glow-text">Sheila Marie De Guzman</h1>
-      <div>
-        <a href="about.html">About Me</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Portfolio</a>
-        <a href="hazure.html">Hazure Saga</a>
-        <a href="personal-journey.html">Personal Journey</a>
-        <a href="contact.html">Hire Me</a>
-        <a href="eastereggs.html">👀</a>
-      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="mailto:hazurevale@gmail.com">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="card" style="text-align: center;">
-      <h2>Welcome to the World of Sheila ✨</h2>
-      <p>Corporate enough to survive meetings, chaotic enough to write spicy novels under <strong>Hazure Vale</strong>.</p>
-      <p>Need someone who can troubleshoot your tech issues AND write a character death that makes people cry? You're in the right place.</p>
-      <a href="contact.html" class="btn">Hire Me</a>
+    <section class="hero">
+      <h1 class="glow-text wiggle">Hazure Vale</h1>
+      <p>A little unhinged. A lot skilled. Welcome to my chaotic resume portal.</p>
+      <a href="HazureVale_Resume.pdf" class="btn" download>Download Resume</a>
     </section>
 
-    <section style="margin-top: 3rem;">
-      <h3 class="glow-text" style="text-align:center;">Explore the Galaxy:</h3>
-      <div class="explore-container">
-        <a href="about.html" class="card">✨ About Sheila & Hazure</a>
-        <a href="work.html" class="card">📁 Work Experience</a>
-        <a href="skills.html" class="card">🧠 Skills & Perks</a>
-        <a href="projects.html" class="card">📚 Portfolio & Projects</a>
-        <a href="hazure.html" class="card">🖋️ Hazure the Writer Saga</a>
-        <a href="personal-journey.html" class="card">👩‍👧 Personal Journey</a>
-        <a href="contact.html" class="card">📨 Hire Me</a>
-        <a href="eastereggs.html" class="card">🐣 Easter Eggs</a>
+    <section class="projects">
+      <h2>Featured Projects</h2>
+      <div class="card">
+        <h3>RoomZer0</h3>
+        <p>Technical Support • Zendesk • Gorgias • Custom CRM • Shopify</p>
+        <a href="https://hazure611.github.io/RoomZer0/" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Shop Solar Kits</h3>
+        <p>Tier 1 Tech Support • Salesforce • Solar hardware knowledge • Customer success</p>
+        <a href="https://hazure611.github.io/ShopSolarKits/" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Convert Digital</h3>
+        <p>Account Coordination • Client Emails • Jira • Magento • Project Trafficking</p>
+        <a href="https://hazure611.github.io/ConvertDigital/" target="_blank">View Project</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Made with sass and CSS by Sheila Marie De Guzman 💖</p>
+    <p>Made with coffee-fueled chaos by Hazure Vale ✨</p>
   </footer>
 </body>
 </html>
