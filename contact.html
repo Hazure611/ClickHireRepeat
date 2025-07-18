@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hire Sheila | Slide into My Inbox</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f8f8f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      display: flex; flex-direction: column; min-height: 100vh;
+    }
+    header, footer {
+      background-color: #1f1f2e;
+      color: #c084fc;
+      padding: 1rem 0;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+      color: #ec4899;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #d8bfd8;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-size: 1.125rem;
+    }
+    form {
+      background-color: #1a1a2e;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px #6b21a8aa;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #c084fc;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1.25rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #2a2a4a;
+      color: #f8f8f2;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: background-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      background-color: #3b3b66;
+      outline: none;
+    }
+    button {
+      background-color: #c084fc;
+      color: #121212;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+    button:hover {
+      background-color: #ec4899;
+      color: white;
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #7c3aedaa;
+      font-style: italic;
+    }
+    .contact-links {
+      text-align: center;
+      margin-top: 1rem;
+      color: #d8bfd8;
+      font-style: italic;
+    }
+    .contact-links a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: 700;
+      margin: 0 0.5rem;
+    }
+    .contact-links a:hover {
+      color: #ec4899;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Slide Into My Inbox</h1>
+  </header>
+
+  <main>
+    <p class="subtitle">Ready to change your company's fate? Let’s make magic happen.</p>
+
+    <form action="mailto:deguzmanalie987@gmail.com,mariedg.987@gmail.com" method="post" enctype="text/plain" novalidate>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required placeholder="Who’s sliding in?" />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required placeholder="Where do I reach you?" />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Give me all the juicy details..."></textarea>
+
+      <button type="submit">Send It!</button>
+    </form>
+
+    <div class="contact-links">
+      Or catch me on:<br />
+      <a href="https://t.me/MariDG25" target="_blank" rel="noopener">Telegram @MariDG25</a> | 
+      <a href="https://wa.me/639952223486" target="_blank" rel="noopener">WhatsApp 0995 222 3486</a> | 
+      <span style="color:#7289da; font-weight:700;">Discord: Alie987</span><br />
+      Or just call/text: <strong>0995 222 3486</strong>
+    </div>
+
+    <p class="footer-note">No bots, no flakes, just real talk. Promise.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Sheila Marie De Guzman | Powered by sass & caffeine.</p>
+  </footer>
+
+</body>
+</html>
