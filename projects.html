@@ -14,7 +14,7 @@
       flex-wrap: wrap;
     }
     .card {
-      max-width: 600px;
+      max-width: 700px;
       margin: 1rem auto;
       background-color: #1f2937;
       border-radius: 1rem;
@@ -41,6 +41,7 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-900 text-white font-sans">
 
   <header class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
@@ -61,14 +62,13 @@
     <h2 class="text-4xl font-bold mb-12 text-center">📚 Projects & Portfolio</h2>
 
     <div id="project-container" class="card">
-      <!-- Project info will appear here -->
+      <!-- Dynamic content -->
     </div>
 
     <div class="btn-group">
       <button onclick="prevProject()" class="btn">⬅️ Previous</button>
       <button onclick="nextProject()" class="btn">Next ➡️</button>
     </div>
-
   </main>
 
   <footer class="bg-gray-900 text-center py-6 mt-10 text-sm text-gray-400">
@@ -77,6 +77,11 @@
 
   <script>
     const projects = [
+      {
+        title: "My Canva Portfolio",
+        description: "A visual showcase of my work, designs, and creative projects.",
+        embed: "https://www.canva.com/design/DAHDTaZDyVY/view?embed"
+      },
       {
         title: "Room Zer0",
         description: "A genre-bending tale of rebellion, found family, and the chaos of control — crafted by Hazure Vale.",
@@ -105,16 +110,32 @@
     function renderProject(index) {
       const container = document.getElementById("project-container");
       const project = projects[index];
-      const linksHTML = project.links.map(link => `
-        <a href="${link.href}" target="_blank" rel="noopener noreferrer" class="book-link">
-          ${link.text}
-        </a>
-      `).join('');
-      container.innerHTML = `
+
+      let content = `
         <h3 class="text-3xl font-semibold mb-4">${project.title}</h3>
         <p class="mb-6">${project.description}</p>
-        <div>${linksHTML}</div>
       `;
+
+      if (project.embed) {
+        content += `
+          <div class="w-full h-[500px]">
+            <iframe 
+              src="${project.embed}" 
+              class="w-full h-full rounded-lg border-none">
+            </iframe>
+          </div>
+        `;
+      } else {
+        const linksHTML = project.links.map(link => `
+          <a href="${link.href}" target="_blank" rel="noopener noreferrer" class="book-link">
+            ${link.text}
+          </a>
+        `).join('');
+
+        content += `<div>${linksHTML}</div>`;
+      }
+
+      container.innerHTML = content;
     }
 
     function nextProject() {
@@ -129,5 +150,6 @@
 
     renderProject(currentIndex);
   </script>
+
 </body>
 </html>
