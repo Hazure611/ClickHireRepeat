@@ -6,69 +6,52 @@
   <title>Portfolio | Sheila Marie De Guzman</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    .card {
-      max-width: 700px;
-      margin: 1rem auto;
-      background-color: #1f2937;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .btn-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .btn {
-      padding: 0.5rem 1rem;
-      background: #4f46e5;
-      color: white;
-      border-radius: 0.75rem;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #ec4899;
-    }
-
-    .link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #a78bfa;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .link:hover {
-      color: #f472b6;
-      text-decoration: underline;
-    }
-  </style>
 </head>
 
 <body class="bg-gray-900 text-white font-sans">
 
-  <header class="bg-gray-800 p-4 text-center font-bold">
-    Sheila Marie De Guzman
+  <!-- Header -->
+  <header class="bg-gray-800 p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Sheila Marie De Guzman</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="work.html" class="hover:underline">Experience</a>
+        <a href="skills.html" class="hover:underline">Skills</a>
+        <a href="projects.html" class="underline font-semibold">Portfolio</a>
+        <a href="contact.html" class="hover:underline">Hire Me</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- Main -->
   <main class="py-20 px-6 max-w-4xl mx-auto">
+
     <h2 class="text-4xl font-bold mb-10 text-center">📚 Projects & Portfolio</h2>
 
-    <div id="project-container" class="card"></div>
+    <!-- Card -->
+    <div id="project-card"
+         class="bg-gray-800 rounded-2xl p-8 text-center shadow-lg transition duration-300">
 
-    <div class="btn-group">
-      <button class="btn" onclick="prevProject()">⬅️ Previous</button>
-      <button class="btn" onclick="nextProject()">Next ➡️</button>
     </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-center gap-4 mt-6">
+      <button onclick="prevProject()"
+              class="px-4 py-2 bg-indigo-600 hover:bg-pink-500 rounded-lg transition">
+        ⬅️ Previous
+      </button>
+
+      <button onclick="nextProject()"
+              class="px-4 py-2 bg-indigo-600 hover:bg-pink-500 rounded-lg transition">
+        Next ➡️
+      </button>
+    </div>
+
   </main>
 
+  <!-- Footer -->
   <footer class="text-center text-gray-500 text-sm py-6">
     © 2025 Sheila Marie De Guzman / Hazure Vale
   </footer>
@@ -78,30 +61,22 @@
       {
         title: "My Canva Portfolio",
         description: "A visual showcase of my work, designs, and creative projects.",
-        links: [
-          { text: "Open Portfolio", href: "https://www.canva.com/design/DAHDTaZDyVY/view" }
-        ]
+        link: "https://www.canva.com/design/DAHDTaZDyVY/view"
       },
       {
         title: "Room Zer0",
-        description: "A genre-bending tale of rebellion, found family, and the chaos of control.",
-        links: [
-          { text: "Explore Room Zer0", href: "https://hazure611.github.io/RoomZer0/" }
-        ]
+        description: "A genre-bending tale of rebellion, found family, and control.",
+        link: "https://hazure611.github.io/RoomZer0/"
       },
       {
         title: "Obsidian Code",
         description: "Dark secrets unravel in this gripping novel.",
-        links: [
-          { text: "Order on Amazon", href: "https://a.co/d/h8ZySnL" }
-        ]
+        link: "https://a.co/d/h8ZySnL"
       },
       {
         title: "Crimson Confession",
         description: "A tale of forbidden truths and passion.",
-        links: [
-          { text: "Order on Amazon", href: "https://a.co/d/fzzLVNu" }
-        ]
+        link: "https://a.co/d/fzzLVNu"
       }
     ];
 
@@ -110,14 +85,14 @@
     function renderProject(i) {
       const p = projects[i];
 
-      const links = p.links.map(l =>
-        `<a class="link" href="${l.href}" target="_blank">${l.text}</a>`
-      ).join("");
-
-      document.getElementById("project-container").innerHTML = `
+      document.getElementById("project-card").innerHTML = `
         <h3 class="text-2xl font-bold mb-3">${p.title}</h3>
-        <p class="text-gray-300">${p.description}</p>
-        <div>${links}</div>
+        <p class="text-gray-300 mb-6">${p.description}</p>
+
+        <a href="${p.link}" target="_blank"
+           class="inline-block px-6 py-3 bg-purple-600 hover:bg-pink-500 rounded-xl transition font-semibold">
+          Open Link
+        </a>
       `;
     }
 
